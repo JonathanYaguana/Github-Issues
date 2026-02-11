@@ -5,4 +5,6 @@ import { Component } from '@angular/core';
   imports: [],
   templateUrl: './issues-page.component.html',
 })
-export default class IssuesPageComponent { }
+export default class IssuesPageComponent {
+
+}
