@@ -3,8 +3,8 @@ import { provideRouter } from '@angular/router';
 import { provideTanStackQuery, QueryClient } from '@tanstack/angular-query-experimental'
 import { withDevtools } from '@tanstack/angular-query-experimental/devtools/production'
 
-import { routes } from './app.routes';
-import { DevtoolsOptionsManager } from './modules/issues/services/devtoolsOptionsManager.service';
+import { routes } from './src/app/app.routes';
+import { DevtoolsOptionsManager } from './src/app/modules/issues/services/devtoolsOptionsManager.service';
 
 export const appConfig: ApplicationConfig = {
   providers: [

@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { getLabels } from '../actions';
+import { getIssues, getLabels } from '../actions';
 import { injectQuery } from '@tanstack/angular-query-experimental';
 
 @Injectable({
@@ -8,8 +8,13 @@ import { injectQuery } from '@tanstack/angular-query-experimental';
 export class IssuesService {
 
   labelQuery = injectQuery(() => ({
-    queryKey: ['todos'],
+    queryKey: ['labels'],
     queryFn: () => getLabels()
   }));
 
+
+  issuesQuery = injectQuery(() => ({
+    queryKey: ['issues'],
+    queryFn: () => getIssues()
+  }));
 }

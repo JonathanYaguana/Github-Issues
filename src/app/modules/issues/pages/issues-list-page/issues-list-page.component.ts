@@ -15,4 +15,8 @@ export default class IssuesListPageComponent {
   get labelsQuery() {
     return this.issuesService.labelQuery;
   }
+
+  get issuesQuery() {
+    return this.issuesService.issuesQuery;
+  }
  }
