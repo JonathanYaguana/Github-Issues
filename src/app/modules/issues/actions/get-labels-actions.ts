@@ -1,6 +1,6 @@
 import { sleep } from "@helpers/sleep";
 import { GitHubLabel } from "../interfaces";
-import { environment } from "src/environments/environment.development";
+import { environment } from "src/environments/environment";
 
 
 const BASE_URL = environment.baseURL;
@@ -11,6 +11,7 @@ export const getLabels = async (): Promise<GitHubLabel[]> => {
   await sleep(1500);
 
   try {
+
     const resp = await fetch(`${BASE_URL}/labels`, {
       headers: {
         Authorization: `Bearer ${GITHUB_TOKEN}`,

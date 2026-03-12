@@ -7,7 +7,7 @@ import { injectQuery } from '@tanstack/angular-query-experimental';
 })
 export class IssuesService {
 
-  labelQuery = injectQuery(() => ({
+  labelsQuery = injectQuery(() => ({
     queryKey: ['labels'],
     queryFn: () => getLabels()
   }));
