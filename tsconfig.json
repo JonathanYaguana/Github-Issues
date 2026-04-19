@@ -4,9 +4,11 @@
   "compileOnSave": false,
   "compilerOptions": {
     "outDir": "./dist/out-tsc",
-    "baseUrl": "./",
     "paths": {
-      "@helpers/*": ["src/app/helpers/*"],
+      "*": ["./src/*"],
+      "@app/*": ["./src/app/*"],
+      "@lib/*": ["./src/lib/*"],
+      "@helpers/*": ["./src/app/helpers/*"],
     },
     "forceConsistentCasingInFileNames": true,
     "strict": true,

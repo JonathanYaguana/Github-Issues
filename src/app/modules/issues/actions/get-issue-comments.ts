@@ -3,16 +3,17 @@ import { GitHubIssues } from "../interfaces";
 import { environment } from "environments/environment";
 
 
+
 const BASE_URL = environment.baseURL;
 const GITHUB_TOKEN = environment.token;
 
-export const getIssues = async (): Promise<GitHubIssues[]> => {
+export const getIssueComments = async ( issueNumber: string ): Promise<GitHubIssues[]> => {
 
   await sleep(1500);
 
   try {
 
-    const resp = await fetch(`${BASE_URL}/issues`, {
+    const resp = await fetch(`${BASE_URL}/issues/${issueNumber}/comments`, {
       headers: {
         Authorization: `Bearer ${GITHUB_TOKEN}`,
       }
@@ -26,6 +27,6 @@ export const getIssues = async (): Promise<GitHubIssues[]> => {
 
     return issues;
   } catch (error) {
-    throw "Can't load issues";
+    throw "Can't load comments";
   }
 };

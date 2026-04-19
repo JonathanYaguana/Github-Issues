@@ -5,6 +5,7 @@ import { withDevtools } from '@tanstack/angular-query-experimental/devtools/prod
 
 import { routes } from './src/app/app.routes';
 import { DevtoolsOptionsManager } from './src/app/modules/issues/services/devtoolsOptionsManager.service';
+import { provideMarkdown } from 'ngx-markdown';
 
 export const appConfig: ApplicationConfig = {
   providers: [
@@ -20,6 +21,7 @@ export const appConfig: ApplicationConfig = {
           deps: [DevtoolsOptionsManager],
         }
       )
-  )
+    ),
+    provideMarkdown(),
   ]
 };
