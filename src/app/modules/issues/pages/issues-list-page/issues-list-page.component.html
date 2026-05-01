@@ -5,9 +5,12 @@
   <!-- Botones para controlar el estado -->
   <div class="col-span-3 flex flex-col">
     <div class="flex gap-2">
-      <button class="btn active">All</button>
-      <button class="btn">Open</button>
-      <button class="btn">Close</button>
+      <button [class.active]="issuesService.selectState() === 'all'" class="btn"
+      (click)="onChangeState('all')">All</button>
+      <button [class.active]="issuesService.selectState() === 'open'" class="btn"
+      (click)="onChangeState('open')">Open</button>
+      <button [class.active]="issuesService.selectState() === 'closed'" class="btn"
+      (click)="onChangeState('closed')">Close</button>
     </div>
   </div>
 

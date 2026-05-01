@@ -8,6 +8,7 @@ const GITHUB_TOKEN = environment.token;
 
 export const getIssueByNumber = async ( issueNumber: string ): Promise<GitHubIssues> => {
 
+  console.log('GetIssue By number called');
   await sleep(1500);
 
   try {
