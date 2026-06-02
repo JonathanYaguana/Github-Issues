@@ -8,6 +8,7 @@ const GITHUB_TOKEN = environment.token;
 
 export const getIssues = async (
   state: State = State.All,
+  selectLabels: string[],
 ): Promise<GitHubIssues[]> => {
 
   await sleep(1500);
