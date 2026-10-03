@@ -1,6 +1,6 @@
-import { sleep } from "@helpers/sleep";
+import { sleep } from "../../../helpers/sleep";
 import { GitHubIssues } from "../interfaces";
-import { environment } from "environments/environment.development";
+import { environment } from "../../../../environments/environment";
 
 
 const BASE_URL = environment.baseURL;
@@ -19,7 +19,7 @@ export const getIssueByNumber = async ( issueNumber: string ): Promise<GitHubIss
       }
     });
 
-    if (!resp.ok) throw "Can't load issue";
+    if (!resp.ok) throw `Can't load issue ${issueNumber}`;
 
     const issue: GitHubIssues = await resp.json();
 
@@ -27,6 +27,6 @@ export const getIssueByNumber = async ( issueNumber: string ): Promise<GitHubIss
 
     return issue;
   } catch (error) {
-    throw "Can't load issue";
+    throw `Can't load issue ${issueNumber}`;
   }
 };

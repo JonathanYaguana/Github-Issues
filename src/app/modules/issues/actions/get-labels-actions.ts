@@ -1,6 +1,7 @@
-import { sleep } from "@helpers/sleep";
+import { sleep } from "../../../helpers/sleep";
 import { GitHubLabel } from "../interfaces";
-import { environment } from "environments/environment.development";
+import { environment } from "../../../../environments/environment";
+
 
 
 

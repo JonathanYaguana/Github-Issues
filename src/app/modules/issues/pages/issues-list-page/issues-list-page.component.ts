@@ -1,4 +1,4 @@
-import { Component, inject } from '@angular/core';
+import { Component, inject, ChangeDetectionStrategy } from '@angular/core';
 import { IssuesService } from '../../services/issues.service';
 
 import { LabelsSelectorComponent } from '../../components/labels-selector/labels-selector-component';
@@ -10,6 +10,7 @@ import { State } from '../../interfaces';
 @Component({
   selector: 'app-issues-list-page',
   imports: [LabelsSelectorComponent, IssuesItem],
+  changeDetection: ChangeDetectionStrategy.Eager,
   templateUrl: './issues-list-page.component.html',
 })
 export default class IssuesListPageComponent {

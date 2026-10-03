@@ -1,6 +1,8 @@
-import { sleep } from "@helpers/sleep";
+import { sleep } from "../../../helpers/sleep";
+
 import { GitHubIssues, State } from "../interfaces";
-import { environment } from "environments/environment";
+import { environment } from "../../../../environments/environment";
+
 
 
 const BASE_URL = environment.baseURL;

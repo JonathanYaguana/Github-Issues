@@ -1,6 +1,6 @@
-import { sleep } from "@helpers/sleep";
+import { sleep } from "../../../helpers/sleep";
 import { GitHubIssues } from "../interfaces";
-import { environment } from "environments/environment";
+import { environment } from "../../../../environments/environment";
 
 
 
