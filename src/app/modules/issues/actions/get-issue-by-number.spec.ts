@@ -59,4 +59,14 @@ describe('getIssueByNumber', () => {
       await expect(error).toBe(`Can't load issue ${mockIssueNumber}`);
     }
   });
+
+  it('should throw an error when fetch fails', async () => {
+    window.fetch = jasmine.createSpy('fetch').and.returnValue(Promise.reject(new Error('Fetch failed')));
+
+    try {
+      await getIssueByNumber(mockIssueNumber);
+    } catch (error) {
+      await expect(error).toBe(`Can't load issue ${mockIssueNumber}`);
+    }
+  });
 });
